@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 //Para transformar de numeros decimales a binarios se necesitan los 8 numeros claves 128, 64, 32, 16, 8, 4, 2, 1.
 //El rango de valores serian de 0 a 255
+
+
 public class Taller {
     public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
