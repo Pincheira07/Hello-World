@@ -92,3 +92,7 @@ public class Taller {
 
 
 }
+
+
+
+![2021-04-07 10_29_38-](https://user-images.githubusercontent.com/70740296/113884412-f1084a00-978c-11eb-968a-c2e5b9b4e9a9.png)
