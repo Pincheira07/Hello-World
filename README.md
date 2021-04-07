@@ -23,7 +23,12 @@ public class Taller {
                 imprimirNumero8bits(convetirBinario8Bits(leerNumero()));
                 break;
             case 2:
+                imprimirNumeroDecimal(convertirEntero(leerNumero8bits()));
                 break;
+            case 3:
+                break;
+
+
 
 
 
@@ -75,11 +80,7 @@ public class Taller {
             }
 
         }
-
         return numero8bits;
-
-
-
 
     }
 
@@ -88,6 +89,52 @@ public class Taller {
             System.out.print(num8bits[i]);
         }
 
+    }
+    public static int[] leerNumero8bits(){
+        char [] aux;
+        System.out.println("Introduce un número binario: ");
+        String numero8Bits = input.next();
+        aux = numero8Bits.toCharArray();
+
+        int[] n8Bits = new int[aux.length];
+        for(int i = 0 ; i<aux.length ; i++){
+
+            n8Bits[i] = Integer.parseInt(String.valueOf(aux[i]));
+        }
+
+        return n8Bits;
+
+    }
+    /*public static boolean validarNumero8bits (char[]  aux){
+        boolean resultado=true;
+        if (aux.length != 8) {
+            resultado=false;
+        }else{
+            for (int i = 0; i < aux.length; i++) {
+                if (aux[i] != 0 || aux[i] !=1){
+                    resultado = false;
+                }else{
+                    resultado = true;
+                }
+            }
+
+        }
+        return resultado;
+    }*/
+    public static int convertirEntero(int numBin [] ) {
+        int numeroDecimal = 0;
+        int [] octetos = {128, 64, 32, 16, 8, 4, 2, 1};
+        for (int i = 0; i < numBin.length; i++) {
+            if (numBin[i] == 1) {
+                numeroDecimal = numeroDecimal + octetos[i];
+            }
+        }
+
+        return numeroDecimal;
+    }
+
+    public static void imprimirNumeroDecimal(int numDecimal){
+        System.out.println(numDecimal);
     }
 
 
